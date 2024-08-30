@@ -17,8 +17,8 @@ import streamlit as st
 
 st.title('Stock Market Prediction for Short Term Investments')
 user_input=st.text_input('Stock Ticker','AAPL')
-date_start=st.text_input('YYYY-MM-DD')
-date_end=st.text_input('YYYY-MM-DD')
+date_start=st.text_input('YYYY-MM-DD','2024-07-01')
+date_end=st.text_input('YYYY-MM-DD','2024-08-29')
 data=yf.download(user_input,date_start,date_end,interval='2m')
 
 #Describing the data
