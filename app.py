@@ -56,7 +56,11 @@ X_test, Y_test=create_dataset(test_data,time_step)
 X_train=X_train.reshape(X_train.shape[0],X_train.shape[1],1)
 X_test=X_test.reshape(X_test.shape[0],X_test.shape[1],1) 
 
-model.save('StockModel.h5', save_format='h5')
+try:
+    model = load_model('StockModel.h5')
+    st.success("Model loaded successfully.")
+except Exception as e:
+    st.error(f"Error loading model: {e}")
 train_predict=model.predict(X_train)
 test_predict=model.predict(X_test)
 
