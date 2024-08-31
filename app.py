@@ -18,7 +18,7 @@ import streamlit as st
 st.title('Stock Market Prediction for Short Term Investments')
 user_input=st.text_input('Stock Ticker','AAPL')
 st.info("Note: Please select a date range within the last 60 days from today.")
-st.subheader('Data for the last 60 days)
+st.subheader('Data for the last 60 days')
 date_start = st.text_input('YYYY-MM-DD', '2024-07-03')  
 date_end = st.text_input('YYYY-MM-DD', '2024-08-31')    
 data=yf.download(user_input,date_start,date_end,interval='2m')
