@@ -13,11 +13,6 @@ import yfinance as yf
 from keras.models import load_model
 import streamlit as st
 
-primaryColor = "green"            
-backgroundColor = "black"         
-secondaryBackgroundColor = "grey" 
-textColor = "green"               
-font = "Monospace"
 
 
 st.title('Stock Market Prediction for Short Term Investments')
