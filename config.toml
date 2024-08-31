@@ -1,0 +1,5 @@
+primaryColor = "green"            
+backgroundColor = "black"         
+secondaryBackgroundColor = "grey" 
+textColor = "green"               
+font = "Monospace"
