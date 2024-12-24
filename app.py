@@ -22,6 +22,9 @@ st.subheader('Data for the last 60 days')
 date_start = st.text_input('YYYY-MM-DD', '2024-07-03')  
 date_end = st.text_input('YYYY-MM-DD', '2024-08-31')    
 data=yf.download(user_input,date_start,date_end,interval='2m')
+if data.empty:
+    st.error("Failed to fetch data. Check ticker symbol or adjust the date range.")
+    st.stop()
 
 #Describing the data
 
